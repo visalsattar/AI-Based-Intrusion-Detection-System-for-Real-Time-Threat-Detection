@@ -1,0 +1,326 @@
+{
+  "A_shortcut_check": {
+    "zeroed": [
+      "Init_Win_bytes_forward",
+      "Init_Win_bytes_backward",
+      "Destination Port"
+    ],
+    "random_forest_same_params": {
+      "train": {
+        "accuracy": 0.9997405424561137,
+        "precision_ddos": 0.9999110399430655,
+        "recall_ddos": 0.9996837694679421,
+        "f1_ddos": 0.99979739178992,
+        "confusion_matrix": {
+          "tn": 56821,
+          "fp": 9,
+          "fn": 32,
+          "tp": 101160
+        },
+        "false_positive_rate": 0.00015836705965159247,
+        "false_negative_rate": 0.0003162305320578702,
+        "support": {
+          "benign": 56830,
+          "ddos": 101192
+        }
+      },
+      "test": {
+        "accuracy": 0.9962789873529868,
+        "precision_ddos": 0.9898450494616126,
+        "recall_ddos": 0.9954221322299498,
+        "f1_ddos": 0.9926257571767184,
+        "confusion_matrix": {
+          "tn": 33674,
+          "fp": 116,
+          "fn": 52,
+          "tp": 11307
+        },
+        "false_positive_rate": 0.003432968333826576,
+        "false_negative_rate": 0.00457786777005018,
+        "support": {
+          "benign": 33790,
+          "ddos": 11359
+        }
+      }
+    },
+    "decision_tree_depth5": {
+      "train": {
+        "accuracy": 0.9993545202566732,
+        "precision_ddos": 0.9997725834519855,
+        "recall_ddos": 0.9992193058739821,
+        "f1_ddos": 0.9994958680953699,
+        "confusion_matrix": {
+          "tn": 56807,
+          "fp": 23,
+          "fn": 79,
+          "tp": 101113
+        },
+        "false_positive_rate": 0.0004047158191096252,
+        "false_negative_rate": 0.000780694126017867,
+        "support": {
+          "benign": 56830,
+          "ddos": 101192
+        }
+      },
+      "test": {
+        "accuracy": 0.9938869077941925,
+        "precision_ddos": 0.9793270478332324,
+        "recall_ddos": 0.996742671009772,
+        "f1_ddos": 0.987958115183246,
+        "confusion_matrix": {
+          "tn": 33551,
+          "fp": 239,
+          "fn": 37,
+          "tp": 11322
+        },
+        "false_positive_rate": 0.007073098549866825,
+        "false_negative_rate": 0.003257328990228013,
+        "support": {
+          "benign": 33790,
+          "ddos": 11359
+        }
+      }
+    }
+  },
+  "B_fixed_budgets": {
+    "thresholds_from": "benign TRAINING rows of the shipped split",
+    "thresholds": {
+      "ae": {
+        "90": 0.003154114820063114,
+        "99": 0.013081952929496765,
+        "99.9": 0.026382630690932274
+      },
+      "iforest": {
+        "90": 0.5261308595691183,
+        "99": 0.6220321137050867,
+        "99.9": 0.6972650619356804
+      }
+    },
+    "per_day": {
+      "Wednesday-workingHours": {
+        "is_ae_training_day": false,
+        "dropped_nan_inf": 1297,
+        "ae_p90": {
+          "benign_flag_rate": 0.11663175515087006,
+          "DoS": 0.7518711861174676,
+          "Heartbleed": 1.0
+        },
+        "ae_p99": {
+          "benign_flag_rate": 0.03841176483966858,
+          "DoS": 0.609804061784897,
+          "Heartbleed": 1.0
+        },
+        "ae_p99.9": {
+          "benign_flag_rate": 0.003243245702017135,
+          "DoS": 0.5698735062293415,
+          "Heartbleed": 1.0
+        },
+        "iforest_p90": {
+          "benign_flag_rate": 0.0796596638942147,
+          "DoS": 0.6664839181286549,
+          "Heartbleed": 1.0
+        },
+        "iforest_p99": {
+          "benign_flag_rate": 0.0173306677765572,
+          "DoS": 0.19783323798627003,
+          "Heartbleed": 1.0
+        },
+        "iforest_p99.9": {
+          "benign_flag_rate": 0.001653463972907754,
+          "DoS": 0.0,
+          "Heartbleed": 0.9090909090909091
+        }
+      },
+      "Tuesday-WorkingHours": {
+        "is_ae_training_day": false,
+        "dropped_nan_inf": 264,
+        "ae_p90": {
+          "benign_flag_rate": 0.15239003920678626,
+          "Brute Force": 0.0075910931174089065
+        },
+        "ae_p99": {
+          "benign_flag_rate": 0.03228017683580624,
+          "Brute Force": 0.00014459224985540774
+        },
+        "ae_p99.9": {
+          "benign_flag_rate": 0.003962363337833738,
+          "Brute Force": 0.00014459224985540774
+        },
+        "iforest_p90": {
+          "benign_flag_rate": 0.08243614712850239,
+          "Brute Force": 0.0
+        },
+        "iforest_p99": {
+          "benign_flag_rate": 0.018165270614826326,
+          "Brute Force": 0.0
+        },
+        "iforest_p99.9": {
+          "benign_flag_rate": 0.001442754155155125,
+          "Brute Force": 0.0
+        }
+      },
+      "Thursday-WorkingHours-Morning-WebAttacks": {
+        "is_ae_training_day": false,
+        "dropped_nan_inf": 135,
+        "ae_p90": {
+          "benign_flag_rate": 0.10396248757817567,
+          "Web Attack": 0.0426605504587156
+        },
+        "ae_p99": {
+          "benign_flag_rate": 0.023748742941130965,
+          "Web Attack": 0.0
+        },
+        "ae_p99.9": {
+          "benign_flag_rate": 0.0036060481639502294,
+          "Web Attack": 0.0
+        },
+        "iforest_p90": {
+          "benign_flag_rate": 0.07622685970330435,
+          "Web Attack": 0.0426605504587156
+        },
+        "iforest_p99": {
+          "benign_flag_rate": 0.017328073025450606,
+          "Web Attack": 0.006880733944954129
+        },
+        "iforest_p99.9": {
+          "benign_flag_rate": 0.0017554194857513493,
+          "Web Attack": 0.0
+        }
+      },
+      "Thursday-WorkingHours-Afternoon-Infilteration": {
+        "is_ae_training_day": false,
+        "dropped_nan_inf": 207,
+        "ae_p90": {
+          "benign_flag_rate": 0.1327650602200729,
+          "Infiltration": 0.6944444444444444
+        },
+        "ae_p99": {
+          "benign_flag_rate": 0.02478507693534795,
+          "Infiltration": 0.4444444444444444
+        },
+        "ae_p99.9": {
+          "benign_flag_rate": 0.003110705752204717,
+          "Infiltration": 0.3055555555555556
+        },
+        "iforest_p90": {
+          "benign_flag_rate": 0.05769197424044334,
+          "Infiltration": 0.8055555555555556
+        },
+        "iforest_p99": {
+          "benign_flag_rate": 0.01362190880118186,
+          "Infiltration": 0.2777777777777778
+        },
+        "iforest_p99.9": {
+          "benign_flag_rate": 0.0012935264722099883,
+          "Infiltration": 0.0
+        }
+      },
+      "Monday-WorkingHours": {
+        "is_ae_training_day": false,
+        "dropped_nan_inf": 437,
+        "ae_p90": {
+          "benign_flag_rate": 0.19097569129015016
+        },
+        "ae_p99": {
+          "benign_flag_rate": 0.036779412292414645
+        },
+        "ae_p99.9": {
+          "benign_flag_rate": 0.005282531384506715
+        },
+        "iforest_p90": {
+          "benign_flag_rate": 0.07004595065734182
+        },
+        "iforest_p99": {
+          "benign_flag_rate": 0.016319754627644806
+        },
+        "iforest_p99.9": {
+          "benign_flag_rate": 0.0013182720437560555
+        }
+      },
+      "Friday-WorkingHours-Morning": {
+        "is_ae_training_day": false,
+        "dropped_nan_inf": 122,
+        "ae_p90": {
+          "benign_flag_rate": 0.1125135614299701,
+          "Bot": 0.025051124744376277
+        },
+        "ae_p99": {
+          "benign_flag_rate": 0.02718636712444762,
+          "Bot": 0.01687116564417178
+        },
+        "ae_p99.9": {
+          "benign_flag_rate": 0.004032706199888862,
+          "Bot": 0.011758691206543968
+        },
+        "iforest_p90": {
+          "benign_flag_rate": 0.07804503717816412,
+          "Bot": 0.017382413087934562
+        },
+        "iforest_p99": {
+          "benign_flag_rate": 0.01959725860654653,
+          "Bot": 0.0
+        },
+        "iforest_p99.9": {
+          "benign_flag_rate": 0.0018205392818395915,
+          "Bot": 0.0
+        }
+      },
+      "Friday-WorkingHours-Afternoon-PortScan": {
+        "is_ae_training_day": false,
+        "dropped_nan_inf": 371,
+        "ae_p90": {
+          "benign_flag_rate": 0.10699022719416774,
+          "PortScan": 0.11808896501347572
+        },
+        "ae_p99": {
+          "benign_flag_rate": 0.027810074474436727,
+          "PortScan": 0.006026296566837107
+        },
+        "ae_p99.9": {
+          "benign_flag_rate": 0.0015711906482732615,
+          "PortScan": 0.00015742676506888995
+        },
+        "iforest_p90": {
+          "benign_flag_rate": 0.07424661408415296,
+          "PortScan": 0.0011019873554822296
+        },
+        "iforest_p99": {
+          "benign_flag_rate": 0.01861860918203815,
+          "PortScan": 0.00014483262386337875
+        },
+        "iforest_p99.9": {
+          "benign_flag_rate": 0.0018461490117210823,
+          "PortScan": 0.0
+        }
+      },
+      "Friday-WorkingHours-Afternoon-DDos": {
+        "is_ae_training_day": true,
+        "dropped_nan_inf": 34,
+        "ae_p90": {
+          "benign_flag_rate": 0.11067092520934423,
+          "DDoS": 0.639992189025581
+        },
+        "ae_p99": {
+          "benign_flag_rate": 0.012959891898532031,
+          "DDoS": 0.4016715485256786
+        },
+        "ae_p99.9": {
+          "benign_flag_rate": 0.0011874782466269477,
+          "DDoS": 0.22456551454793985
+        },
+        "iforest_p90": {
+          "benign_flag_rate": 0.08999242470773704,
+          "DDoS": 0.36603007225151335
+        },
+        "iforest_p99": {
+          "benign_flag_rate": 0.011352701513011076,
+          "DDoS": 0.020472563952353057
+        },
+        "iforest_p99.9": {
+          "benign_flag_rate": 0.0010646356693896771,
+          "DDoS": 0.0
+        }
+      }
+    }
+  }
+}
