@@ -1,4 +1,4 @@
-# AI-Based Intrusion Detection System (IDS)
+# AI-Based Intrusion Detection System (IDS) for Real-Time Threat Detection
 
 Final Year Project — BS Computer Science, The University of Agriculture, Peshawar
 
