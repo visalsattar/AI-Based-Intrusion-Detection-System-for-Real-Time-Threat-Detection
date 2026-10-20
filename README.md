@@ -1,6 +1,8 @@
 # AI-Based Intrusion Detection System (IDS) for Real-Time Threat Detection
 
-Final Year Project — BS Computer Science, The University of Agriculture, Peshawar
+Final Year Project — BS (Hons) Computer Science, The University of Agriculture, Peshawar · Jan 2025 – May 2026
+
+<!-- Add a dashboard screenshot here once captured: ![Live dashboard](docs/screenshots/dashboard.png) -->
 
 A network intrusion detection system that monitors live traffic and scores flows in real time with a fused **Random Forest + Autoencoder** pipeline. A third model, a **CNN**, was trained and evaluated offline for architecture comparison only. It is **not** part of the live detection path (see [Why the CNN doesn't run live](#why-the-cnn-doesnt-run-live)).
 
